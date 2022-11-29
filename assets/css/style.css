@@ -226,11 +226,10 @@ html {
 .tour__tickets--quantity {
     background-color: #000;
     padding: 2px;
+    padding-top: 3px;
     border-radius: 50%;
     width: 22px;
-    justify-self: center;
     color: #fff;
-
 }
 
 /* End: Tickets */
