@@ -1,5 +1,5 @@
 :root {
-    --padding-header: 12px 24px;
+    --padding-header: 16px 24px;
 }
 
 /* Reset CSS */
@@ -18,7 +18,7 @@ html {
 /* Common */
 .btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 13px 16px;
     color: #fff;
     background-color: #000;
     font-size: 1.6rem;
@@ -34,6 +34,10 @@ html {
 
 .mb-16 {
     margin-bottom: 16px !important;
+}
+
+.mb-18 {
+    margin-bottom: 18px !important;
 }
 
 .mb-26 {
@@ -170,6 +174,7 @@ html {
     bottom: 48px;
     text-align: center;
     width: 100%;
+    text-shadow: 0px 0px 1px #000;
 }
 
 .slide__text--title {
@@ -185,7 +190,7 @@ html {
 
 /* Begin: Content */
 .content__section {
-    max-width: 100%;
+    max-width: calc(100% - 64px);
     width: 800px;
     padding: 74px 0 112px;
     margin: 0 auto;
@@ -227,7 +232,7 @@ html {
 
 /* Begin: Content tour ticket*/
 .tour__ticket--item {
-    padding: 8px 16px;
+    padding: 10px 16px;
     color: #757575;
     font-size: 1.6rem;
     text-align: left;
@@ -300,10 +305,21 @@ html {
     width: 30px;
 }
 
+.contact__info--link {
+    color: #0000EE;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+.contact__info--link:hover {
+    opacity: 0.1;
+}
+
 .contact__form--input {
-    padding: 8px;
+    padding: 12px 8px;
     width: 100%;
     font-size: 1.6rem;
+    border: 1px solid #ccc;
 }
 
 .contact__form--btn {
@@ -332,7 +348,8 @@ html {
 }
 
 .footer__social {
-    font-size: 2.4rem;
+    letter-spacing: 6px;
+    font-size: 2.8rem;
 }
 
 .footer__social--icon + .footer__social--icon {
@@ -365,7 +382,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
+    width: 800px;
     max-width: calc(100% - 64px);
     background-color: #009688;
 }
@@ -384,12 +401,12 @@ html {
 }
 
 .modal__header--close {
+    font-size: 3.2rem;
     position: absolute;
     top: 0;
     right: 0;
     background-color: inherit;
-    padding: 16px;
-    padding-left: 20px;
+    padding: 4px 10px 4px 14px;
     text-align: center;
 }
 /*End: Modal header  */
@@ -403,11 +420,12 @@ html {
 
 .modal__body--label i {
     margin-right: 5px;
+    margin-bottom: 2px;
 }
 
 .modal__body--input {
     width: 100%;
-    padding: 8px;
+    padding: 12px 8px;
     border: 1px solid #ccc;
     font-size: inherit;
     margin-top: 10px;
@@ -417,7 +435,7 @@ html {
     width: 100%;
     background-color: #009688;
     text-transform: uppercase;
-    padding: 12px;
+    padding: 13px;
 }
 
 .modal__body--help {
@@ -428,3 +446,46 @@ html {
     color: #2196F3;
 }
 /* End: Modal body */
+
+/* Table */
+@media (max-width: 1023px) {
+    .footer__copyright--link {
+        padding: 12px 0;
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .c-mt-14 {
+        margin-top: 14px !important;
+    }
+
+    .c-mt-32 {
+        margin-top: 32px !important;
+    }
+
+    .c-mb-8 {
+        margin-bottom: 8px !important;
+    }
+
+    .c-mb-16 {
+        margin-bottom: 16px !important;
+    }
+
+    .c-12 {
+        width: 100%;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .content__section {
+        max-width: calc(100% - 28px);
+    }
+
+    .modal__main {
+        max-width: 100%;
+    }
+}
