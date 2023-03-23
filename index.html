@@ -24,33 +24,38 @@
         <header class="header">
             <!-- Begin: Header nav -->
             <ul class="header__nav--list">
-                <li class="header__nav--item">
+                <li class="header__nav--item" id="home">
                     <a class="header__nav--link btn" href="#">home</a>
                 </li>
 
-                <li class="header__nav--item">
+                <li class="header__nav--item js-header-nav--item">
                     <a class="header__nav--link btn" href="#band">band</a>
                 </li>
 
-                <li class="header__nav--item">
+                <li class="header__nav--item js-header-nav--item">
                     <a class="header__nav--link btn" href="#tour">tour</a>
                 </li>
 
-                <li class="header__nav--item">
+                <li class="header__nav--item js-header-nav--item">
                     <a class="header__nav--link btn" href="#contact">contact</a>
                 </li>
 
-                <li class="header__nav--item">
+                <li class="header__nav--item js-header-nav--item">
                     <a class="header__nav--link btn" href="#">
                         more
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
 
-
-                    <ul class="header__subnav--list">
+                    <ul class="header__subnav--list js-subnav-list hide">
                         <li class="header__subnav--item">
                             <a class="header__subnav--link btn" href="#">Merchandise</a>
+                        </li>
+
+                        <li class="header__subnav--item">
                             <a class="header__subnav--link btn" href="#">Extras</a>
+                        </li>
+
+                        <li class="header__subnav--item">
                             <a class="header__subnav--link btn" href="#">Media</a>
                         </li>
                     </ul>
@@ -58,21 +63,23 @@
             </ul>
             <!-- End: Header nav -->
 
-            <!-- Begin: Header find -->
             <div class="header__find--btn btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- End: Header find -->
+
+            <div class="header__list--btn btn js-header-list">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </header>
         <!-- End: Header -->
 
         <!-- Begin: Slide -->
         <div class="slide">
-            <img class="slide--img" src="./assets/img/chicago.jpg" alt="">
+            <img class="slide--img js-slide-img" src="./assets/img/chicago.jpg" alt="">
 
             <div class="slide__text while-color">
-                <h3 class="mb-26 slide__text--title">Chicago</h3>
-                <p class="slide__text--description">Thank you, Chicago - A night we won't forget.</p>
+                <h3 class="mb-26 m-mb-20 c-mb-10 slide__text--title js-slide-heading">Chicago</h3>
+                <p class="slide__text--description js-slide-description">Thank you, Chicago - A night we won't forget.</p>
             </div>
         </div>
         <!-- End: Slide -->
@@ -155,11 +162,12 @@
                                 <div class="tour__place--body">
                                     <h3 class="mb-16 tour__place--label">New York</h3>
                                     <p class="mb-16 tour__place--date">Fri 27 Nov 2016</p>
-                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed vitae
+                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed
+                                        vitae
                                         justo.
                                     </p>
-    
-                                    <button class="c-12 tour__place--btn-buy-tickets btn">buy tickets</button>
+
+                                    <button class="c-12 tour__place--btn-buy-tickets btn js-buy-tickets-btn">buy tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -170,11 +178,12 @@
                                 <div class="tour__place--body">
                                     <h3 class="mb-16 tour__place--label">Paris</h3>
                                     <p class="mb-16 tour__place--date">Sat 28 Nov 2016</p>
-                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed vitae
+                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed
+                                        vitae
                                         justo.
                                     </p>
-    
-                                    <button class="c-12 tour__place--btn-buy-tickets btn">buy tickets</button>
+
+                                    <button class="c-12 tour__place--btn-buy-tickets btn js-buy-tickets-btn">buy tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -185,11 +194,12 @@
                                 <div class="tour__place--body">
                                     <h3 class="mb-16 tour__place--label">San Francisco</h3>
                                     <p class="mb-16 tour__place--date">Sun 29 Nov 2016</p>
-                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed vitae
+                                    <p class="mb-16 tour__place--descrition">Praesent tincidunt sed tellus ut rutrum sed
+                                        vitae
                                         justo.
                                     </p>
-    
-                                    <button class="c-12 tour__place--btn-buy-tickets btn">buy tickets</button>
+
+                                    <button class="c-12 tour__place--btn-buy-tickets btn js-buy-tickets-btn">buy tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +230,7 @@
 
                         <p class="mb-16">
                             <i class="contact__info--icon fa-solid fa-envelope"></i>
-                            Email: 
+                            Email:
                             <a class="contact__info--link" href="mailto:mail@mail.com">mail@mail.com</a>
                         </p>
                     </div>
@@ -271,7 +281,7 @@
             </div>
 
             <span class="footer__copyright">
-                Powered by 
+                Powered by
                 <a class="footer__copyright--link" href="#">w3.css</a>
             </span>
         </footer>
@@ -279,18 +289,18 @@
     </div>
 
     <!-- Begin: Modal -->
-    <div class="modal">
-        <div class="modal__main">
+    <div class="modal js-modal">
+        <div class="modal__main js-modal-main">
             <!-- Begin: Modal header -->
             <header class="modal__header while-color">
                 <i class="modal__header--icon fa-solid fa-briefcase"></i>
                 Tickets
-                <div class="btn modal__header--close">
+                <div class="btn modal__header--close js-close-modal">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </header>
             <!-- End: Modal header -->
-            
+
             <!-- Begin: Modal body -->
             <form action="" method="post" class="modal__body">
                 <div class="mb-16 modal__body--group">
@@ -312,13 +322,14 @@
                 </div>
 
                 <input class="modal__body--btn-pay mb-32 btn" type="button" value="pay">
-                
+
                 <div class="modal__body--help">Need <a href="">help</a></div>
             </form>
             <!-- End: Modal body -->
         </div>
     </div>
-     <!-- End: Modal -->
+    <!-- End: Modal -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

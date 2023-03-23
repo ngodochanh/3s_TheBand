@@ -16,6 +16,14 @@ html {
 }
 
 /* Common */
+.active {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
 .btn {
     display: inline-block;
     padding: 13px 16px;
@@ -106,9 +114,20 @@ html {
 .header__nav--item {
     display: inline-block;
     position: relative;
+    animation: fade-down 1s linear;
 }
 
-.header__nav--item:hover .header__subnav--list{
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    } to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.header__nav--item:hover .header__subnav--list {
     display: block;
 }
 
@@ -118,17 +137,16 @@ html {
 }
 
 .header__nav--link i {
-   margin-left: 4px;
+    margin-left: 4px;
 }
 
 .header__subnav--list {
     list-style-type: none;
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 160px;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .header__subnav--link {
@@ -138,7 +156,6 @@ html {
 }
 /* End: Header nav */
 
-/* Begin: Header find */
 .header__find--btn {
     float: right;
     padding: var(--padding-header);
@@ -148,7 +165,17 @@ html {
     background-color: #f44336;
     color: #fff;
 }
-/* End: Header find */
+
+.header__list--btn {
+    display: none;
+    padding: var(--padding-header);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header__list--btn i {
+    font-size: 1.8rem;
+}
 
 /* Begin: Slide */
 .slide {
@@ -186,6 +213,7 @@ html {
     font-size: 1.6rem;
     font-weight: bold;
 }
+
 /* End: Slide */
 
 /* Begin: Content */
@@ -224,6 +252,7 @@ html {
     width: 60%;
     border-radius: 4px;
 }
+
 /* End: Content band */
 
 .tour {
@@ -259,6 +288,7 @@ html {
     right: 24px;
     transform: translateY(-50%);
 }
+
 /* End: Content tour ticket */
 
 /* Begin: Content tour place */
@@ -293,6 +323,7 @@ html {
 .tour__place--btn-buy-tickets {
     text-transform: capitalize;
 }
+
 /* End: Content tour place */
 
 /* Begin: Content contact */
@@ -326,6 +357,7 @@ html {
     float: right;
     text-transform: uppercase;
 }
+
 /* End: Content contact */
 
 /* Begin: Map */
@@ -338,6 +370,7 @@ html {
     width: 100%;
     opacity: 0.9;
 }
+
 /* End: Map */
 
 /*Begin: Footer */
@@ -352,7 +385,7 @@ html {
     font-size: 2.8rem;
 }
 
-.footer__social--icon + .footer__social--icon {
+.footer__social--icon+.footer__social--icon {
     margin-left: 5px;
 }
 
@@ -363,6 +396,7 @@ html {
 .footer__copyright--link {
     color: rgba(0, 0, 0, 0.6);
 }
+
 /*End: Footer*/
 
 /* Begin: Modal */
@@ -385,6 +419,17 @@ html {
     width: 800px;
     max-width: calc(100% - 64px);
     background-color: #009688;
+    animation: goDown 1s linear;
+}
+
+@keyframes goDown {
+    from {
+        opacity: 0;
+        top: 0;
+    } to {
+        opacity: 1;
+        top: 50%;
+    }
 }
 
 /*Begin: Modal header  */
@@ -409,6 +454,7 @@ html {
     padding: 4px 10px 4px 14px;
     text-align: center;
 }
+
 /*End: Modal header  */
 
 /* Begin: Modal body */
@@ -445,6 +491,7 @@ html {
 .modal__body--help a {
     color: #2196F3;
 }
+
 /* End: Modal body */
 
 /* Table */
@@ -452,6 +499,14 @@ html {
     .footer__copyright--link {
         padding: 12px 0;
         font-size: 1.8rem;
+    }
+
+    .m-mb-20 {
+        margin-bottom: 20px !important;
+    }
+
+    .slide__text {
+        bottom: 35px;
     }
 }
 
@@ -468,6 +523,9 @@ html {
     .c-mb-8 {
         margin-bottom: 8px !important;
     }
+    .c-mb-10 {
+        margin-bottom: 10px !important;
+    }
 
     .c-mb-16 {
         margin-bottom: 16px !important;
@@ -477,8 +535,51 @@ html {
         width: 100%;
     }
 
-    .header {
+    /* Beign: header */
+    .header__nav--list {
+        display: block;
+    }
+
+    .header__nav--item {
         display: none;
+    }
+
+    .header__nav--link {
+        display: block;
+    }
+    
+    #home {
+        display: inline-block;
+    }
+
+    #home .header__nav--link.btn:hover {
+        color: #000;
+        background-color: #ccc;
+    }
+
+    .header__nav--item .header__nav--link.btn:hover {
+        color: #fff;
+        background-color: #000;      
+    }
+
+    .header__subnav--list {
+        width: 100%;
+    }
+    /* End: header */
+
+    .header__find--btn {
+        display: none;
+    }
+
+    .header__list--btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .slide__text {
+        bottom: 22px;
     }
 
     .content__section {
@@ -489,3 +590,4 @@ html {
         max-width: 100%;
     }
 }
+
